@@ -1,0 +1,38 @@
+# Dependency directories
+node_modules/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables file (if using dotenv or similar)
+.env
+
+# Logs
+logs/
+*.log
+
+# Optional: Build output
+dist/
+build/
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Runtime data
+npm-debug.log*
+
+# Ignore local configuration (you might adjust this based on your needs)
+config/local.js
+
+# Ignore test coverage output
+coverage/
+
+# Ignore any other files or directories that you don't want to include
