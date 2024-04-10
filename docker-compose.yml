@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nodejs-app:
+    image: nodejs-app-image
+    ports:
+      - "8080:8080"  
+    networks:
+      - traefik-global-proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.reto18.rule=Host(`<username>.inteliti.com`)"
+      - "traefik.http.routers.reto18.entrypoints=websecure"
+      - "traefik.http.routers.reto18.tls.certresolver=letsencrypt"
+      - "traefik.http.services.reto18.loadbalancer.server.port=8080"
+
+networks:
+  traefik-global-proxy:
+    external: true
